@@ -23,25 +23,36 @@
   font-weight: bold;
   font-style: normal;
 }
+/*
+body 너비는 1280px
+좌우여백 100px
+헤더 높이 100px
+푸터 480px
+배경색 f1f1f1
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f1f1f1;
 }
 
 h1 {
   font-family: "GmarketSansBold";
   letter-spacing: -1px;
+  font-size: 2em;
 }
 
 p {
   font-family: "Kakao Small Sans";
   letter-spacing: -1px;
+  font-size: 1em;
 }
 
 .about_wrap {
   width: 1280px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .about_wrap .slogan > h1 {
   margin: 10px;
@@ -56,6 +67,7 @@ p {
 .about_wrap .slogan_ment > h3 {
   font-family: "KakaoBigSans-ExtraBold";
   margin: 15px 0;
+  font-size: 1.17em;
 }
 
 /* 연혁 css */

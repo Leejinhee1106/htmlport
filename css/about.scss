@@ -1,90 +1,111 @@
-@import 'font';
+@import "font";
+@import "reset";
 /*
 body 너비는 1280px
 좌우여백 100px
 헤더 높이 100px
 푸터 480px
 배경색 f1f1f1
+행간 12pt -> line-height: 16px;
+자간 -20 -> letter-spacing: -1px;
 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f1f1f1;
+  // background-color: #f1f1f1;
 }
-h1{ 
-    font-family: 'GmarketSansBold';
+h1 { 
     letter-spacing: -1px;
     font-size: 2em;
 }
-p{ 
-    font-family: 'Kakao Small Sans';
+p { 
+    font-family: 'KakaoBigSans-Regular' !important;
+    font-weight: 400 !important;
     letter-spacing: -1px;
     font-size: 1em;
 }
-.about_wrap{
+.about_wrap {
   width: 1280px;
   margin: 0 auto;
-//   padding: 0 100px;
+  padding: 0 100px;
   box-sizing: border-box;
 
-  .slogan > h1{
+  .slogan > h1 {
     margin: 10px;
   }
-  .slogan_img{
-    width: 1280px;
+  .slogan_img {
+    width: 100%;
     padding-top: 66.67%; 
     background-image: url('../img/every.jpg');
     background-size: cover;
     background-position: center;
   }
-  .slogan_ment{
+  .slogan_ment {
     > h3 {
         font-family: 'KakaoBigSans-ExtraBold';
         margin: 15px 0;
         font-size: 1.17em;
     }
   }
-}
-/* 연혁 css */
-// 폰트 7.5pt -> font-size: 10px;
-// 행간 12pt -> line-height: 16px;
-// 자간 -20 -> letter-spacing: -1px;
-.history {
-  position: relative;
-  padding-left: 60px; // 세로줄 + 여백 확보
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 125px; // 원하는 위치
-    width: 2px;
-    background-color: black;
-    z-index: 0;
-  }
-
-  .history-item {
+  
+  /* 연혁 css */
+  // 폰트 7.5pt -> font-size: 10px;
+  // 행간 12pt -> line-height: 16px/1.6em;
+  // 자간 -20 -> letter-spacing: -1px/-0.02em;
+  .history {
+    margin-top: 80px;
     position: relative;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    z-index: 1; // 줄 위에 올라오게
-
-    .year {
-      font-size: 24px;
-      font-weight: bold;
-      margin-right: 20px;
-      min-width: 50px;
-      color: #000;
+    height: 800px;
+    overflow: hidden;
+    .history-bg {
+      width: 580px;
+      height: 800px;
+      background: url(../img/logo_yellow\(600_800\).png) no-repeat;
+      background-size: contain;
+      background-position: -100px;
+      position: absolute;
+      z-index: 0;
     }
 
-    .content {
-      font-size: 14px;
-      line-height: 1.6;
-      letter-spacing: -0.02em;
+    .history-item {
+      position: relative;
+      top: 80px;
+      left: 350px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      z-index: 1;
+      
+      .year {
+        font-size: 20px;
+        margin-right: 70px;
+        min-width: 50px;
+        color: #000;
+      }
+      .content {
+        font-size: 14px;
+        line-height: 1.6em;
+        letter-spacing: -0.02em;
+      }
     }
-  }
+    .ceo{
+      width: 300px;
+      height: 400px;
+      background: url(../img/ceo.png);
+      background-size: cover;
+      position: absolute;
+      top: 300px;
+    }
+    .line{
+      width: 2px;
+      height: 580px;
+      background-color: black;
+      position: absolute;
+      left: 435px;
+      top: 120px;
+    }
 }
+}
+
 

@@ -1,50 +1,89 @@
 @charset "UTF-8";
+/* 카카오 큰글씨 */
 @font-face {
   font-family: "KakaoBigSans-ExtraBold";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
   font-style: normal;
 }
-@font-face {
-  font-family: "Kakao Small Sans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoSmallSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+/* G마켓 산스 B */
 @font-face {
   font-family: "GmarketSansBold";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
-  font-weight: bold;
   font-style: normal;
 }
+/* G마켓 산스 M */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-style: normal;
+}
+/* G마켓 산스 L */
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-style: normal;
+}
+/* - ▼ Class ----------------------------------------------------------- */
+.kakao-b {
+  font-family: "KakaoBigSans-ExtraBold" !important;
+  font-weight: 800 !important;
+}
+
+.kakao-l {
+  font-family: "KakaoBigSans-Regular" !important;
+  font-weight: 400 !important;
+}
+
+.gmarket-b {
+  font-family: "GmarketSansBold" !important;
+  font-weight: 800 !important;
+}
+
+.gmarket-m {
+  font-family: "GmarketSansMedium" !important;
+  font-weight: 600 !important;
+}
+
+.gmarket-l {
+  font-family: "GmarketSansLight" !important;
+  font-weight: 300 !important;
+}
+
+html, html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li, ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*
 body 너비는 1280px
 좌우여백 100px
 헤더 높이 100px
 푸터 480px
 배경색 f1f1f1
+행간 12pt -> line-height: 16px;
+자간 -20 -> letter-spacing: -1px;
 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f1f1f1;
 }
 
 h1 {
-  font-family: "GmarketSansBold";
   letter-spacing: -1px;
   font-size: 2em;
 }
 
 p {
-  font-family: "Kakao Small Sans";
+  font-family: "KakaoBigSans-Regular" !important;
+  font-weight: 400 !important;
   letter-spacing: -1px;
   font-size: 1em;
 }
@@ -52,13 +91,15 @@ p {
 .about_wrap {
   width: 1280px;
   margin: 0 auto;
+  padding: 0 100px;
   box-sizing: border-box;
+  /* 연혁 css */
 }
 .about_wrap .slogan > h1 {
   margin: 10px;
 }
 .about_wrap .slogan_img {
-  width: 1280px;
+  width: 100%;
   padding-top: 66.67%;
   background-image: url("../img/every.jpg");
   background-size: cover;
@@ -69,38 +110,54 @@ p {
   margin: 15px 0;
   font-size: 1.17em;
 }
-
-/* 연혁 css */
-.history {
+.about_wrap .history {
+  margin-top: 80px;
   position: relative;
-  padding-left: 60px;
+  height: 800px;
+  overflow: hidden;
 }
-.history::before {
-  content: "";
+.about_wrap .history .history-bg {
+  width: 580px;
+  height: 800px;
+  background: url(../img/logo_yellow\(600_800\).png) no-repeat;
+  background-size: contain;
+  background-position: -100px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 125px;
-  width: 2px;
-  background-color: black;
   z-index: 0;
 }
-.history .history-item {
+.about_wrap .history .history-item {
   position: relative;
+  top: 80px;
+  left: 350px;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   z-index: 1;
 }
-.history .history-item .year {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 20px;
+.about_wrap .history .history-item .year {
+  font-size: 20px;
+  margin-right: 70px;
   min-width: 50px;
   color: #000;
 }
-.history .history-item .content {
+.about_wrap .history .history-item .content {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.6em;
   letter-spacing: -0.02em;
+}
+.about_wrap .history .ceo {
+  width: 300px;
+  height: 400px;
+  background: url(../img/ceo.png);
+  background-size: cover;
+  position: absolute;
+  top: 300px;
+}
+.about_wrap .history .line {
+  width: 2px;
+  height: 580px;
+  background-color: black;
+  position: absolute;
+  left: 435px;
+  top: 120px;
 }/*# sourceMappingURL=about.css.map */

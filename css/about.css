@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "KakaoBigSans-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kakao Small Sans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoSmallSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "GmarketSansBold";
+  letter-spacing: -1px;
+}
+
+p {
+  font-family: "Kakao Small Sans";
+  letter-spacing: -1px;
+}
+
+.about_wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+.about_wrap .slogan > h1 {
+  margin: 10px;
+}
+.about_wrap .slogan_img {
+  width: 1280px;
+  padding-top: 66.67%;
+  background-image: url("../img/every.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.about_wrap .slogan_ment > h3 {
+  font-family: "KakaoBigSans-ExtraBold";
+  margin: 15px 0;
+}
+
+/* 연혁 css */
+.history {
+  position: relative;
+  padding-left: 60px;
+}
+.history::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 125px;
+  width: 2px;
+  background-color: black;
+  z-index: 0;
+}
+.history .history-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+.history .history-item .year {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  min-width: 50px;
+  color: #000;
+}
+.history .history-item .content {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+}/*# sourceMappingURL=about.css.map */

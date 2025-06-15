@@ -1,0 +1,76 @@
+@import 'font';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{ 
+    font-family: 'GmarketSansBold';
+    letter-spacing: -1px;
+}
+p{ 
+    font-family: 'Kakao Small Sans';
+    letter-spacing: -1px;
+}
+.about_wrap{
+  width: 1280px;
+  margin: 0 auto;
+  .slogan > h1{
+    margin: 10px;
+  }
+  .slogan_img{
+    width: 1280px;
+    padding-top: 66.67%; 
+    background-image: url('../img/every.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .slogan_ment{
+    > h3 {
+        font-family: 'KakaoBigSans-ExtraBold';
+        margin: 15px 0;
+    }
+  }
+}
+/* 연혁 css */
+// 폰트 7.5pt -> font-size: 10px;
+// 행간 12pt -> line-height: 16px;
+// 자간 -20 -> letter-spacing: -1px;
+.history {
+  position: relative;
+  padding-left: 60px; // 세로줄 + 여백 확보
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 125px; // 원하는 위치
+    width: 2px;
+    background-color: black;
+    z-index: 0;
+  }
+
+  .history-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    z-index: 1; // 줄 위에 올라오게
+
+    .year {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 20px;
+      min-width: 50px;
+      color: #000;
+    }
+
+    .content {
+      font-size: 14px;
+      line-height: 1.6;
+      letter-spacing: -0.02em;
+    }
+  }
+}
+

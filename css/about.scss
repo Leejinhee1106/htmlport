@@ -1,5 +1,6 @@
 @import "font";
 @import "reset";
+@import "mobile";
 /*
 body 너비는 1280px
 좌우여백 100px
@@ -16,17 +17,16 @@ body 너비는 1280px
   // background-color: #f1f1f1;
 }
 h1 { 
+  font-size: 48px;
     letter-spacing: -1px;
-    font-size: 2em;
 }
 p { 
     font-family: 'KakaoBigSans-Regular' !important;
     font-weight: 400 !important;
     letter-spacing: -1px;
-    font-size: 1em;
 }
 .about_wrap {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 100px;
   box-sizing: border-box;
@@ -45,7 +45,8 @@ p {
     > h3 {
         font-family: 'KakaoBigSans-ExtraBold';
         margin: 15px 0;
-        font-size: 1.17em;
+        font-size: 32px;
+        word-break: break-all;
     }
   }
   
@@ -57,7 +58,7 @@ p {
     margin-top: 80px;
     position: relative;
     height: 800px;
-    overflow: hidden;
+    // overflow: hidden;
     .history-bg {
       width: 580px;
       height: 800px;
@@ -78,7 +79,7 @@ p {
       z-index: 1;
       
       .year {
-        font-size: 20px;
+        font-size: 24px;
         margin-right: 70px;
         min-width: 50px;
         color: #000;
@@ -95,15 +96,15 @@ p {
       background: url(../img/ceo.png);
       background-size: cover;
       position: absolute;
-      top: 300px;
+      top: 330px;
     }
     .line{
       width: 2px;
-      height: 580px;
+      height: 590px;
       background-color: black;
       position: absolute;
       left: 435px;
-      top: 120px;
+      top: 150px;
     }
 }
 }

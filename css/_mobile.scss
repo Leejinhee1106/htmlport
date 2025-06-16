@@ -1,0 +1,49 @@
+//패드-웹 중간 글자잘리는 부분
+@media screen and (min-width: 501px) and (max-width: 1200px){
+    .about_wrap{
+        max-width: 1200px !important;
+    
+        .history{
+            max-width: 1000px !important;
+            .history-item > .content{
+                width: 380px !important;
+            }
+            .line{
+                height: 610px !important;
+            }
+        }
+    }
+}
+
+
+// 모바일
+@media screen and (max-width: 500px) {
+    .about_wrap{
+        padding: 0 40px !important;
+        max-width: 500px;
+        .history{
+            max-width: 500px;
+            .history-bg{
+                max-width: 480px;
+                top: -50px;
+                left: 10px;
+                transition: all 0.1s;
+            }
+            .ceo{
+                width: 250px !important;
+                height: 350px !important;
+                top: 220px !important;
+                left: -30px;
+                filter: opacity(0);
+                transition: all 0.1s;
+            }
+            .line{display: none;}
+            .history-item{
+                left: 0 !important;
+                top: 50px !important;
+                margin-bottom: 20px !important;
+                transition: all 0.1s;
+            }
+        }
+    }   
+}
